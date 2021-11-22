@@ -19,3 +19,10 @@ class Team:
     def play_game(self, boolean):
         if boolean:
             self.points += 3
+
+
+    def remove_player(self, player_name):
+        self.players.remove(player_name)
+    
+    def change_coach(self, new_coach):
+        self.coach = new_coach

@@ -50,3 +50,11 @@ class TestTeam(unittest.TestCase):
     def test_play_game__lose(self):
         self.team.play_game(False)
         self.assertEqual(0, self.team.points)
+
+    def test_remove_player(self):
+        self.team.remove_player("Junior Bevil")
+        self.assertEqual(3, len(self.team.players))
+
+    def test_change_coach(self):
+        self.team.change_coach("Alex Ferguson")
+        self.assertEqual("Alex Ferguson", self.team.coach)
